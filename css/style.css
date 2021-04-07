@@ -72,3 +72,97 @@ footer {
 footer ul {
     padding-left: 0;
 }
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.skills {
+    text-align: center;
+}
+#skills-title {
+    padding: 20px;
+    font-size: 50px;
+}
+.flex-container div {
+    width: 33%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-container div img {
+    max-width: 400px;
+}
+.work h1, .work h3 {
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "image1 info1"
+        "image2 info2"
+        "image3 info3";
+    grid-gap: 10px; 
+    padding: 25px;
+}
+.image-1 {
+    grid-area: image1;
+}
+.image-2 {
+    grid-area: image2;
+}
+.image-3 {
+    grid-area: image3;
+}
+.grid-info-1 {
+    grid-area: info1;
+}
+.grid-info-2 {
+    grid-area: info2;
+}
+.grid-info-3 {
+    grid-area: info3;
+}
+.image-1, .image-2, .image-3 {
+    margin: 0 auto;
+}
+.grid-info-1, .grid-info-2, .grid-info-3 {
+    color: #111111;
+    text-align: center;
+}
+.grid-container img {
+    max-width: 400px;
+    max-height: 200px;
+}
+@media only screen and (max-width: 1300px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .flex-container div {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .flex-container div img {
+        max-width: 90%;
+    }
+    .flex-container div p {
+        padding: 0 10px;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "image1"
+            "info1"
+            "image2"
+            "info2"
+            "image3"
+            "info3";
+        padding: 10px;
+    }
+}
